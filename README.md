@@ -49,16 +49,36 @@ Testing was conducted on a deliberately vulnerable application in a controlled l
 
 ---
 
-### 2. SQL Injection (Basic)
+### 2. SQL Injection (Login Bypass)
 
 - **Risk Level:** High  
-- **Description:** The application failed to properly sanitize user input in database queries.  
-- **Impact:** Attackers may gain unauthorized access to sensitive data or manipulate the database.  
-- **Fix:** Use parameterized queries and prepared statements.  
+- **Type:** Authentication Bypass via SQL Injection  
+- **Description:** The application failed to properly sanitize user input in the login form, allowing SQL injection payloads to bypass authentication controls.  
+- **Impact:** Unauthorized access to the application without valid credentials.  
+- **Fix:** Use parameterized queries and prepared statements to prevent direct SQL query manipulation.
+
+---
 
 #### 📸 Proof of Concept
 
-![SQL Injection](screenshots/sqli-test.png)
+**1. SQL Injection Payload (Input):**  
+![SQLi Input](screenshots/sqli-input.PNG)
+
+**2. Successful Login Bypass Result:**  
+![SQLi Result](screenshots/sqli-result.PNG)
+
+**3. Burp Suite Request (Payload Injection):**  
+![SQLi Burp](screenshots/sqli-burp.PNG)
+
+---
+
+#### 🧠 Attack Summary
+The payload `admin' OR 1=1 --` was used to manipulate the authentication query, resulting in successful login without valid credentials.
+
+---
+
+#### ⚖️ Security Impact
+This vulnerability allows attackers to completely bypass authentication mechanisms and gain unauthorized access to user accounts or administrative panels.
 
 ---
 
