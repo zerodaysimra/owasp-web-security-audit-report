@@ -97,19 +97,23 @@ This vulnerability allows attackers to completely bypass authentication mechanis
 
 ---
 
-### Weak Authentication (Tested)
+### 3. Weak Authentication / Login Bypass
 
-- **Risk Level:** Medium / Not Confirmed  
-- **Description:** Authentication system was tested using common credential patterns and brute force behavior analysis.  
-- **Result:** No successful login bypass was achieved using default or weak credentials.  
-- **Observation:** No evidence of weak authentication or insecure credential acceptance found during testing.
+- **Risk Level:** High  
+- **Type:** Authentication Bypass via Weak Credentials  
+- **Description:** The application allowed authentication bypass using weak or predictable credentials, indicating insufficient login security controls.  
+- **Impact:** Unauthorized users can gain access to protected accounts without valid credentials.  
+- **Fix:** Enforce strong password policies, implement account lockout mechanisms, and use multi-factor authentication (MFA).
 
 ---
 
-#### 📸 Test Evidence
+#### 📸 Proof of Concept
 
-**1. Login Attempt:**
-![Weak Auth Input](screenshots/weak-auth.PNG)
+**1. Login Bypass Attempt (Input):**  
+![Weak Auth Input](screenshots/login-atempt.PNG)
+
+**2. Successful Authentication (Access Granted):**  
+![Weak Auth Success](screenshots/weak-auth-success.PNG)
 
 ---
 
