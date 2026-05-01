@@ -40,10 +40,10 @@ Testing was conducted on a deliberately vulnerable application in a controlled l
 #### 📸 Proof of Concept
 
 **Burp Suite Request (Payload Injection):**
-![Burp Request](screenshots/xss-burp-request.png)
+![Burp Request](screenshots/xss-burp-request.PNG)
 
 **Execution Confirmation:**
-![XSS Execution](screenshots/xss-popup.png)
+![XSS Execution](screenshots/xss-popup.PNG)
 
 > Note: Execution was validated via application behavior (challenge completion), indicating successful payload processing.
 
