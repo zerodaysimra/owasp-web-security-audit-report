@@ -25,6 +25,21 @@ Testing was conducted on a deliberately vulnerable application in a controlled l
 
 ---
 
+### Network Reconnaissance (Nmap)
+
+- **Tool Used:** Nmap  
+- **Command:** nmap -sV -p 3000 localhost  
+- **Purpose:** Identified open ports and services running on the target system.
+
+#### Result:
+![Nmap Scan](screenshots/nmap-3000-scan.PNG)
+
+- Port 3000 is open and running a web application  
+- Service identified as HTTP  
+- Confirmed target environment for web security testing
+
+---
+
 ## ⚠️ Vulnerabilities Identified
 
 ---
